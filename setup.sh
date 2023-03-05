@@ -43,13 +43,13 @@ echo ""
 dark_theme() {
   read -p "Would you like to install a dark theme? y/n " yesnotheme
   if [ $yesnotheme == "y" ]
-  then
-    echo "Installing Weilbyte's PVE Discord Dark theme..."
-    apt install curl -y
-    bash <(curl https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/PVEDiscordDark.sh)
-    remove_popup()
-  else
-    remove_popup()
+    then
+      echo "Installing Weilbyte's PVE Discord Dark theme..."
+      apt install curl -y
+      bash <(curl https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/PVEDiscordDark.sh)
+      remove_popup()
+    else
+      remove_popup()
   fi
 }
 
