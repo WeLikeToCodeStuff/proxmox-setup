@@ -42,27 +42,27 @@ echo ""
 dark_theme() {
   read -p "Would you like to install a dark theme? y/n " yesnotheme
   if [ $yesnotheme == "y" ]
-      then
+  then
       echo "Installing Weilbyte's PVE Discord Dark theme..."
       apt install curl -y
       bash <(curl https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/PVEDiscordDark.sh)
       remove_popup()
   fi
   if [ $yesnotheme == "n" ]
-     then 
-     remove_popup()
-   fi
+  then 
+    remove_popup()
+  fi
 }
 remove_popup() {
   read -p "Would you like to remove the Proxmox Subscription Notice message? y/n " yesnopopup
   if [ $yesnopopup== "y" ]
-      then
+  then
       echo "Removing the subscription notice popup..."
       sed -Ezi.bak "s/(Ext.Msg.show\(\{\s+title: gettext\('No valid sub)/void\(\{ \/\/\1/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js && systemctl restart pveproxy.service
       bedone()
   fi
   if [ $yesnopopup == "n" ]
-     then 
+  then 
      bedone()
    fi 
 }
