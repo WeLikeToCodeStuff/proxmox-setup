@@ -41,7 +41,6 @@ EOF
  echo ""
  dark_theme() {
    read -p "Would you like to install a dark theme? y/n " yesnotheme
-   echo
    if [ $yesnotheme == "y" ]
        then
        echo "Installing Weilbyte's PVE Discord Dark theme..."
@@ -72,3 +71,4 @@ EOF
  echo "Thank you for using Neon's Proxmox setup script! If you have any issues, please send them via the issues page on our Github located at https://github.com/WeLikeToCodeStuff/proxmox-setup/issues"
  exit 0
  }
+ dark_theme()
